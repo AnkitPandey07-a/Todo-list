@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3346af;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color:rgb(224, 5, 42)
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+
+
+#todo-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ce1414;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#add-btn {
+  padding: 10px 15px;
+  background-color: #32c54f;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#add-btn:hover {
+  background-color: #ee2e2e;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.delete-btn {
+  background-color: #f80404;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #eeeeee;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #dbd3d3;
+}
+
+#motivational-quote {
+  font-style: italic;
+  font-size: 20px;
+  animation: fadeInOut 8s infinite;
+}
+
+/* Add to your styles.css */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.todo-item {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+/* Add to your styles.css */
+@keyframes slideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+.deleting {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+/* Add to your styles.css */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #4CAF50;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  left: 3px;
+  top: -1px;
+}
+
+.todo-item.completed span {
+  transition: all 0.3s ease;
+  color: #888;
+}
+.gif-container {
+  text-align: center;
+ }
+
